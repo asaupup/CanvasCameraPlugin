@@ -69,6 +69,7 @@ cordova.define("cordova/plugin/CanvasCamera", function(require, exports, module)
 
 
     CanvasCamera.prototype.capture = function(data) {
+        data = 'cdvfile://localhost/documents/' + data.substring(data.indexOf('/tmp/') + 1);
         this._camImage.src = data;
     };
 
